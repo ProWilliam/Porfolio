@@ -1,10 +1,21 @@
-.header-style {
+.header-style {  
+  inline-size: 100%;
+  padding-block-start: 0.75rem; 
+  padding-block-end: 0.75rem;
+  z-index: 1;
+
+  background-color: #050b01; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  
+}
+
+.items-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block-start: 0.75rem; 
-  padding-block-end: 0.75rem; 
-  inline-size: 1120px;
+
+  padding: 0 10%;
+  inline-size: 80%;
 }
 
 .profil-photo {
@@ -28,4 +39,12 @@ a {
 
 a:hover {
   opacity: 90%;
+}
+
+@media only screen and (max-width : 600px) {
+
+  .items-nav {
+    padding: 0;
+    inline-size: 100%;
+  }
 }
