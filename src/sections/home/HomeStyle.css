@@ -1,0 +1,30 @@
+.section-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-home h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex; 
+  flex-direction: row;
+}
+
+.section-home h1 div {
+  margin-inline-start: 5px;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-inline-size: 740px) {
+  .section-home h1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+p {
+  font-size: 2rem;
+}
