@@ -1,23 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Badge from '../components/badge/Badge.astro';
+import Home from '../sections/home/Home.astro';
 import './index.css';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main class="main-style">
-		<section id="section-home">
-			<h1>
-				Hi, I'm William Toro 
-				<div id="badge-home">
-					<Badge>
-						Available to work
-					</Badge>
-				</div>
-			</h1>
-			<h2>
-				+4 years of experience. web developer | desktop applications | pentester. from medellin colombia. Committed to creating automated applications, dynamic websites, and interactive web pages.
-			</h2>
-		</section>
+		<Home />
 	</main>
 </Layout>
