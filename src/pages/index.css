@@ -1,37 +1,14 @@
-.mian-style {
+.main-style {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  inline-size: 100%;
-  margin: 0;
-  padding: 0;
+  inline-size: 100vh;
+  block-size: 100vh;
+  padding: 0 25%;
 }
 
-#section-home {
-  inline-size: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  
+.main-style section {
+  max-inline-size: 1000px;
 }
 
-#section-home h1 {
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  display: flex; 
-  flex-direction: row;
-}
 
-#section-home h1 div {
-  margin-inline-start: 5px;
-  display: flex;
-  align-items: center;
-}
-
-@media only screen and (min-inline-size: 740px) {
-  #section-home h1 {
-    display: flex;
-    flex-direction: column;
-  }
-}
