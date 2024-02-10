@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  max-inline-size: 100%;
-  align-items: center;
+  inline-size: 100vh;
+  block-size: 100vh;
+  padding: 0 25%;
 }
 
 .main-style section {
   max-inline-size: 1000px;
 }
+
 
