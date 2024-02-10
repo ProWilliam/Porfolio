@@ -1,5 +1,8 @@
 ---
-import './HeaderStyle.css'
+import { Icon } from 'astro-icon/components'
+import './HeaderStyle.css';
+
+
 ---
 
 <header class="header-style">
@@ -9,7 +12,6 @@ import './HeaderStyle.css'
 			src="https://media.licdn.com/dms/image/D4E35AQE5dD5uD5NRbw/profile-framedphoto-shrink_200_200/0/1699386833710?e=1707868800&v=beta&t=uJvNoanVhhnRuqvsm1DNqzBF_FjLKkQmYm5N2s0I3TA" 
 			alt="William photo"
 		/>
-
 		<nav class="nav-style">
 			<a href="/">Home</a>
 			<a href="/about">About</a>
@@ -17,4 +19,43 @@ import './HeaderStyle.css'
 			<a href="/contact">Contact</a>
 		</nav>
 	</div>
+	<div class="mobile-menu" >
+		<div class="menu-toggle" id="menuToggleOpen">
+			<Icon 
+				name="menu"
+				size={40}
+			/>
+		</div>
+		<div class="menu-items" id="menuItems" hidden="false">
+			<Icon 
+				name="close"
+				size={40}
+				id="menuToggleClose"
+			/>
+			<a href="/">Home</a>
+			<a href="/about">About</a>
+			<a href="/projects">Projects</a>
+			<a href="/contact">Contact</a>
+		</div>
+	</div>
 </header>
+
+<script>
+	const buttonToggleOpen = document.getElementById('menuToggleOpen');
+	const buttonToggleClose = document.getElementById('menuToggleClose');
+	const menu = document.getElementById('menuItems');
+
+	buttonToggleOpen?.addEventListener('click', () => {
+		if(menu) {
+			menu.style.display = 'grid';
+		}
+	});
+
+	buttonToggleClose?.addEventListener('click', () => {
+		if(menu){
+			menu.style.display = 'none';
+		}
+	});
+	
+</script>
+
