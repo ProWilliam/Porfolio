@@ -29,3 +29,8 @@ strong:hover {
   color: white;
   opacity: 70%;
 }
+
+.social-media {
+  display: flex;
+  margin-block-start: 2.5rem;
+}
