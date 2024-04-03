@@ -21,7 +21,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked ~ .check-mode {
-  background: var(--color-primary-dark);
+  background: var(--color-tertiary-dark);
 }
 
 /* Animation click on the element  */
