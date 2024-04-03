@@ -10,9 +10,14 @@
   padding: 0.75rem;
   z-index: 1;
 
-  background-color: #030601; 
-  box-shadow: 0 5px 10px #030601;
+  background-color: var(--color-primary); 
+  box-shadow: 0 5px 10px var(--color-primary);
   
+}
+
+.theme-dark .header-style {
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 5px 10px var(--color-primary-dark);
 }
 
 .items-nav {
@@ -40,13 +45,13 @@
 
 a {
   text-decoration: none;
-  color: white; 
-  opacity: 50%;
+  color: var(--color-quaternary); 
+  opacity: 70%;
   font-size: 25px;
 }
 
 a:hover {
-  opacity: 90%;
+  opacity: 100%;
 }
 
 @media only screen and (max-width: 676px) {
@@ -67,8 +72,8 @@ a:hover {
   }
 
   .menu-toggle {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-quaternary);
     border: none;
     padding: 10px 10px;
     cursor: pointer;
@@ -81,7 +86,7 @@ a:hover {
     inset-inline-start: 0;
     inline-size: 100%; 
     block-size: 100%; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(var(--color-primary), 0.5); 
     display: none; 
     place-content: center; 
     list-style-type: none; 
