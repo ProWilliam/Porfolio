@@ -1,0 +1,45 @@
+---
+import './SocialMediaStyle.css'
+---
+
+<span class="button-social-media">
+  <a {...Astro.props} target="_blank">
+    <slot />
+  </a>
+</span>
+
+<script>
+  const elementCopy = document.querySelector('a:not([href])');
+
+  elementCopy?.addEventListener('click', (event) => {
+
+    const rangeCopy = document.createRange();
+
+    rangeCopy.selectNode(elementCopy);
+
+    // Copy Text 
+    window.getSelection()?.removeAllRanges();
+    window.getSelection()?.addRange(rangeCopy);
+    document.execCommand('copy');
+    window.getSelection()?.removeAllRanges();
+    console.log('clicking!');
+
+    // show message on window 
+    var span = document.createElement('span');
+    span.id = 'tooltip';
+    span.textContent= 'Copied!'
+
+    span.style.display = 'block';
+    const { clientX, clientY } = event as MouseEvent;
+    span.style.left = `${clientX + 1}px`;
+    span.style.top = `${clientY - 50}px`;
+
+    elementCopy.appendChild(span);
+
+    // hidden span
+    setTimeout(() => {
+      span.remove();
+    }, 1000);
+  });
+
+</script>
