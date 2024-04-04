@@ -56,7 +56,7 @@ import './FormStyle.css';
 
 <script>
   const URL_FORM_SEND = import.meta.env.PUBLIC_URL_CONNECT_EMAIL;
-  const form = document.querySelector('#form-contact');
+  const form = document.querySelector('#form-contact') as HTMLFormElement;
 
   form?.addEventListener('submit', (event) => {
     handleSubmit(event as SubmitEvent);
