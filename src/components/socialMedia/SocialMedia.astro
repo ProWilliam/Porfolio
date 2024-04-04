@@ -13,17 +13,24 @@ import './SocialMediaStyle.css'
 
   elementCopy?.addEventListener('click', (event) => {
 
-    const rangeCopy = document.createRange();
-
-    rangeCopy.selectNode(elementCopy);
+    const text = (elementCopy.textContent || '').trim();
 
     // Copy Text 
-    window.getSelection()?.removeAllRanges();
-    window.getSelection()?.addRange(rangeCopy);
-    document.execCommand('copy');
-    window.getSelection()?.removeAllRanges();
-    console.log('clicking!');
+    navigator.clipboard.writeText(text)
+    .then(() => {
+      if(text != ''){
+        messageCopy(elementCopy as HTMLAnchorElement, event as MouseEvent);
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+    
+    
+    
+  });
 
+  function messageCopy(elementCopy : HTMLAnchorElement, event : MouseEvent){
     // show message on window 
     var span = document.createElement('span');
     span.id = 'tooltip';
@@ -40,6 +47,6 @@ import './SocialMediaStyle.css'
     setTimeout(() => {
       span.remove();
     }, 1000);
-  });
+  }
 
 </script>
