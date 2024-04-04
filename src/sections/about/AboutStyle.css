@@ -1,7 +1,11 @@
-.about-me h2 {
+.title-about-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
   color: white;
-  opacity: 80%;
-  font-size: 2.5rem;
+
+  margin-inline-start: -80px;
 }
 
 .about-me p {
